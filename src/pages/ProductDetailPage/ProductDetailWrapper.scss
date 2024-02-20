@@ -1,0 +1,20 @@
+.no-js{
+    visibility: hidden;
+}
+.product-form__info-content{
+    text-align: left;
+}
+.product-form__inventory{
+    a,br{
+        display: none;
+    }
+}
+.product-form__info-item:nth-child(2){
+    display: none;
+}
+.block-swatch__radio:checked+.block-swatch__item {
+    box-shadow: 0 0 0 1px #7854ff !important;
+    border-color: #7854ff !important;
+    background: #e9e4ff !important;
+    color: #3d2e59 !important;
+  }

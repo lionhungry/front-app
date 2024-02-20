@@ -1,0 +1,170 @@
+body {
+  margin:0px;
+  padding: 0px;
+}
+.App {
+  text-align: center;
+}
+.image--fade-in {
+  opacity: 1 !important;
+}
+.footer__title{
+  text-align: center !important;
+}
+#block-163136493278a34a4c-0 {
+  background-color: #f3f4f4;
+  color: #ffffff
+}
+
+#block-163136493278a34a4c-0 .button {
+  background: #cb1937;
+  color: #ffffff;
+}
+#block-163136493278a34a4c-0 .promo-block__image-wrapper {
+  background-image: url(https://brasero-france.com/cdn/shop/files/brasero-plancha-min_800x.jpg?v=1683705986);
+}
+#block-163136493278a34a4c-1 {
+  background-color: #f3f4f4;
+  color: #ffffff
+}
+
+#block-163136493278a34a4c-1 .button {
+  background: #cb1937;
+  color: #ffffff;
+}
+#block-163136493278a34a4c-1 .promo-block__image-wrapper {
+  background-image: url(https://brasero-france.com/cdn/shop/files/brasero-feu-min_696b3ae7-e1c2-4613-bb89-91a52c0cd99f_800x.jpg?v=1683706304);
+}
+#block-163136493278a34a4c-2 {
+  background-color: #f3f4f4;
+  color: #ffffff
+}
+
+#block-163136493278a34a4c-2 .button {
+  background: #ed8307;
+  color: #ffffff;
+}
+#block-163136493278a34a4c-2 .promo-block__image-wrapper {
+  background-image: url(https://brasero-france.com/cdn/shop/files/Sans_titre_13_800x.jpg?v=1670415050);
+}
+#block-163136493278a34a4c-3 .promo-block__image-wrapper {
+  background-image: url(https://brasero-france.com/cdn/shop/files/brasero-mexicain-min_800x.jpg?v=1683705742);
+}
+#block-163136493278a34a4c-3 {
+  background-color: #f3f4f4;
+  color: #ffffff
+}
+
+#block-163136493278a34a4c-3 .button {
+  background: #cb1937;
+  color: #ffffff;
+}
+#block-163136493278a34a4c-4 {
+  background-color: rgba(0,0,0,0);
+  color: #ffffff
+}
+
+#block-163136493278a34a4c-4 .button {
+  background: #cb1937;
+  color: #ffffff;
+}
+#block-163136493278a34a4c-4 .promo-block__image-wrapper {
+  background-image: url(https://brasero-france.com/cdn/shop/files/table-brasero_2_-min_800x.jpg?v=1683705722);
+}
+.mobile-menu__nav-item_drop{
+  text-align: left;
+  padding-left: 0px;
+  color:#5b5858;
+  font-size: 14px;
+  >a{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 16px;
+    padding: 8px 0px 7px 20px;
+    color:black;
+  }
+}
+.collection__toolbar{
+  display: none !important;
+}
+.collection__dynamic-part{
+  border-top:1px solid #e1e3e4;
+}
+.pagination{
+  display: none;
+}
+.product-item__info{
+  text-align: left;
+}
+.collection__meta-inner > p{
+  display: none;
+}
+.header_logo_text{
+  font-size: 25px;
+}
+@media screen and (max-width: 600px) {
+  .header_logo_text{
+    font-size: 20px;
+  }
+}
+.button--primary,.button{
+  background: #7854ff !important;
+      &:hover {
+        background-color: #6138fb !important;
+        color: #fff !important;
+      }
+      &:active {
+        background-color: #7854ff !important;
+        color: #fff !important;
+      }
+      &:focus {
+        background-color: #7854ff !important;
+        color: #fff !important;
+      }
+      &[disabled] {
+        background-color: #e7e7e7 !important;
+        color: #616161 !important;
+      }
+}
+a:hover{
+  color: #7854ff !important;
+}
+.nav-bar__linklist li:nth-of-type(5).nav-bar__item .nav-bar__link.link {
+  color: #222021 !important;
+  &:hover{
+    color: #7854ff !important;
+  }
+}
+.header__cart-count{
+  background-color: #6138fb !important;
+}
+.price{
+  color: #7854ff !important;
+}
+.product-item__price-list{
+  +span{
+    color: #3d2e59 !important;
+  }
+}
+.slideshow__image[alt="Brasero France banner"] {
+  visibility: hidden;
+}
+.section__action-link{
+  color: #3d2e59 !important;
+}
+.product-gallery__thumbnail.is-nav-selected {
+  border-color: #7854ff !important;
+}
+.collection-list{
+  a:hover{ 
+    .collection-item__title{
+        color:#7854ff !important;
+    }
+  }
+}
+.collection__header--brand{
+  align-items:center !important;
+  padding-bottom:30px;
+}

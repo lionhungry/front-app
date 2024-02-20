@@ -1,0 +1,27 @@
+#shopify-section-footer{
+  visibility: hidden;
+  display: none;
+}
+#shopify-section-text-with-icons{
+  visibility: hidden;
+  display: none;
+}
+#footer_content{
+  position: relative;
+  top:155px;
+}
+@media only screen and (max-width: 1105px) {
+  #main{
+    top: 220px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  #main{
+    top: 88px;
+  }
+}
+@media only screen and (max-width: 640px) {
+  #main{
+    top: 0px;
+  }
+}

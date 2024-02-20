@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>FEU DE BRASERO</title>
+    <script>
+      function handleClickHeaderStyle(val){
+         const e = val;
+         const currentValue = e.getAttribute('aria-expanded');
+         const aTagValue = currentValue === 'true' ? 'false' : 'true';
+         e.setAttribute('aria-expanded', aTagValue);
+         const nextDiv = e.nextElementSibling;
+         if (nextDiv) {
+           const currentValue = nextDiv.getAttribute('aria-hidden');
+           const divTagValue = currentValue === 'true' ? 'false' : 'true';
+           nextDiv.setAttribute('aria-hidden', divTagValue);
+         }
+         const parent = e.parentNode;
+         if (parent && parent.tagName.toLowerCase() === 'li') {
+           if(nextDiv.getAttribute("id") === 'desktop-menu-0-2'){
+             parent.classList.add('nav-bar__item--static');
+           }else{
+             parent.classList.add('is-dropdown-open');
+           }
+         }
+       };
+
+       function handleClickForMobileStyle(){
+         const e = document.querySelector('.header__mobile-nav-toggle');;
+         const currentValue = e.getAttribute('aria-expanded');
+         const aTagValue = currentValue === 'true' ? 'false' : 'true';
+         e.setAttribute('aria-expanded', aTagValue);
+         const nextDiv = e.nextElementSibling;
+         if (nextDiv) {
+           const currentValue = nextDiv.getAttribute('aria-hidden');
+           const divTagValue = currentValue === 'true' ? 'false' : 'true';
+           nextDiv.setAttribute('aria-hidden', divTagValue);
+           nextDiv.style.minHeight = '300px';
+         }
+       }
+   </script>
+   <script>
+    const getCollectionLogoImage = () => {
+      var div = document.querySelector('.collection__brand-logo-image');
+      if(div){
+        const imageUrl = div.getAttribute('data-bg');
+        div.style.backgroundImage = "url('" + imageUrl + "')";
+        div.classList.remove('lazyload');
+      }else{
+       setTimeout(getCollectionLogoImage,1000)
+      }
+    };
+    document.addEventListener("DOMContentLoaded", function() {
+        getCollectionLogoImage()
+    });
+  </script>
+  </head>
+  <style>
+    #shopify-section-header{
+      visibility: hidden;
+      display: none;
+    }
+  </style>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>
