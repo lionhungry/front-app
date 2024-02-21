@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-expressions */
-import React,{ useState,useEffect } from 'react';
+import React,{ useState,useEffect,useInsertionEffect } from 'react';
 import { fetchExternalData, changeButtonAttr } from '../../helper/helper';
 import FireLaoding from '../../components/atoms/fireLoading/FireLoading';
 import Header from '../../components/atoms/Header/Header';
@@ -16,11 +16,11 @@ const ProductDetailPage = () => {
       const htmlCode = response.replace('method="post" action="/cart/add"', '');
       await setHtmlContent(htmlCode);
       await changeButtonAttr();
-    }
-
-    useEffect(() => {
+    };
+    
+    useInsertionEffect(()=>{
       fetch({url:window.location.pathname});
-    }, []);
+    },[])
 
     function handleClick(event) {
       // Prevent default behavior (e.g., following the link)
