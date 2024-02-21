@@ -68,6 +68,7 @@ export const HeaderSection = `<div id="shopify-section-header-update_fix" class=
   &quot;desktopOpenTrigger&quot;: &quot;hover&quot;,
   &quot;useStickyHeader&quot;: true
 }">
+  <div style="width:100%;height:40px;display: flex;justify-content: center;align-items: center;background:#1b1430;color:#ff3737">De réduction 40%</div>
   <header class="header header--inline " role="banner" style="background-color:#312165">
     <div class="container">
       <div class="header__inner"><nav class="header__mobile-nav hidden-lap-and-up">

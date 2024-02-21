@@ -38,8 +38,14 @@ const ProductsList = ({ products, disable }) => {
         if (countElement) {
             countElement.innerHTML = value.data.length
         }
-    },[value])
-  
+    },[value]);
+    
+  const calculateDiscount = (total)=>{
+    const discount = total * 0.4;
+    const discountedPrice = total - discount;
+    return discountedPrice;
+  };
+
   return (
     <div className='product_list_content'>
         <h1>{disable ? 'Vérifier':'Mon panier'}</h1>
@@ -57,7 +63,7 @@ const ProductsList = ({ products, disable }) => {
                                         <button onClick={()=>deleteItem(index)} >Supprimer</button>
                                     </div>
                                     <div  className='price_quantity'>
-                                        <span>Prix : {(el.price * el.quantity)}€</span>
+                                        <span>Prix : {!disable? (el.price * el.quantity) : calculateDiscount(el.price * el.quantity)}€</span>
                                         <InputButton el={el} index={index} increment={(e)=>increment(e)} decrement={(e)=>decrement(e)} disable={disable}/>
                                     </div>
                                 </div>

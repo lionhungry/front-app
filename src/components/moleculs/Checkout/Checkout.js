@@ -29,9 +29,19 @@ const CARD_OPTIONS = {
 const Checkout = ({amount}) => {
   const [message, setMessage] = useState({message: '', success: false});
   const [error, setError] = useState(null);
+  const [discount,setDiscount] = useState(0)
+  
   const stripe = useStripe();
   const elements = useElements();
   const [requestCall, , , response] = useApiCall(payment);
+
+  useEffect(()=>{
+    if(amount){
+        const discount = amount * 0.4;
+        const discountedPrice = amount - discount;
+        setDiscount(discountedPrice)
+    }
+   },[amount]);
 
   const { form, use } = useForm({
     // defaultValues: { 
@@ -73,7 +83,7 @@ const Checkout = ({amount}) => {
       } else {
         setError(null);
         const { id } = paymentMethod;
-        requestCall({ ...values, amount, id });
+        requestCall({ ...values, amount:discount, id });
       }
     } 
   });
@@ -86,9 +96,9 @@ const Checkout = ({amount}) => {
       console.log('Successful payment');
       setMessage({...message,...response});
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [response]);
-
+  
   const labelDeafultColor = '#d6d3d3';
   const errorColor = '#a82a2a';
   const successColor = 'rgb(100, 160, 100)';
@@ -173,7 +183,7 @@ const Checkout = ({amount}) => {
                 {error && <div className="error-message" >{error}</div>}
                 <div className="success-message" style={{color:`${message.success? successColor : errorColor}`}}>{message.message}</div>
               </div>
-              <input type="submit"  value='Payer maintenant'/>
+              <input type="submit"  value={`Payer ${discount.toFixed(2)}€`}/>
           </form>
       </div>
   )

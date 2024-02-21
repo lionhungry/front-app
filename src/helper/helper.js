@@ -28,6 +28,7 @@ const filterFormValue = (form)=>{
 }
 
 const setPrice = ({productId,productTemplateData})=>{
+    console.log(4567890)
     const selectElement = document.getElementById(`product-select-${productId}`);
                 
     if (selectElement) {

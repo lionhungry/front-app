@@ -1,15 +1,29 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './TotalCardPayWrapper.scss';
 
 const TotalCardPay = ({total}) => {
+   const  [discount,setDiscount] = useState(0)
+   useEffect(()=>{
+    if(total){
+        const discount = total * 0.4;
+        const discountedPrice = total - discount;
+        setDiscount(discountedPrice)
+    }
+   },[total]);
+   
   return (
     <div>
         <div>
         <div className="cart-recap__scroller">
                 <div className="card totalPay_card">
-                  <div className="card__section"><grammarly-extension data-grammarly-shadow-root="true" style={{position: 'absolute', top: '0px', left: '0px', pointerEvents: 'none'}} className="dnXmp"></grammarly-extension><grammarly-extension data-grammarly-shadow-root="true" style={{position: 'absolute', top: '0px; left: 0px', pointerEvents: 'none'}} className="dnXmp"></grammarly-extension><div className="cart-recap__price-line text--pull">
+                  <div className="card__section"><grammarly-extension data-grammarly-shadow-root="true" style={{position: 'absolute', top: '0px', left: '0px', pointerEvents: 'none'}} className="dnXmp"></grammarly-extension><grammarly-extension data-grammarly-shadow-root="true" style={{position: 'absolute', top: '0px; left: 0px', pointerEvents: 'none'}} className="dnXmp"></grammarly-extension>
+                    <div className="cart-recap__price-line text--pull">
                       <span className="cart-recap__price-line-label">Total</span>
                       <span className="cart-recap__price-line-price">{total}.00€</span>
+                    </div>
+                    <div className="cart-recap__price-line text--pull">
+                      <span className="cart-recap__price-line-label">De réduction 40%</span>
+                      <span className="cart-recap__price-line-price">{discount.toFixed(2)}€</span>
                     </div>
                     <div className="cart-recap__note">
                     </div>

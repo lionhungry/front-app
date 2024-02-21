@@ -41,21 +41,35 @@ const ProductDetailPage = () => {
       if(htmlContent){
         setTimeout(()=>{
           const thumbnails = document.querySelectorAll('.product-gallery__thumbnail-list a');
+          const addCard = document.querySelector('.product-form__add-button');
           // Initialize an empty array to store href values
-          if(thumbnails){
-            // Loop through each <a> tag and extract the href attribute
-            thumbnails.forEach((a) => {
-              const href = a.getAttribute('href');
-              a.setAttribute('data-image', href);
-              a.removeAttribute('href');
-              a.addEventListener('click', handleClick);
-            });
-          }
+            if(thumbnails){
+              // Loop through each <a> tag and extract the href attribute
+              thumbnails.forEach((a) => {
+                const href = a.getAttribute('href');
+                a.setAttribute('data-image', href);
+                a.removeAttribute('href');
+                a.addEventListener('click', handleClick);
+              });
+            }
+            if(addCard){
+              addCard.style.setProperty("line-height", "25px", "important");
+              addCard.innerHTML += `
+                                      <div style="text-align: center;
+                                      color: #ff3837;
+                                      width: 100%;
+                                      margin: 0px;
+                                      ">
+                                         <span>De réduction</span>
+                                         <span> 40%</span>
+                                      </div>
+                                    `
+            }
         },1000)
         
       }
    },[htmlContent]);
-
+    
    return (
      <div>
         {htmlContent ? (
