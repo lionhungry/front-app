@@ -22,7 +22,7 @@ const TotalCardPay = ({total}) => {
                       <span className="cart-recap__price-line-price">{total}.00€</span>
                     </div>
                     <div className="cart-recap__price-line text--pull">
-                      <span className="cart-recap__price-line-label">De réduction 40%</span>
+                      <span className="cart-recap__price-line-label">Réduction de 40%</span>
                       <span className="cart-recap__price-line-price">{discount.toFixed(2)}€</span>
                     </div>
                     <div className="cart-recap__note">

@@ -60,7 +60,7 @@ const ProductDetailPage = () => {
                                       width: 100%;
                                       margin: 0px;
                                       ">
-                                         <span>De réduction</span>
+                                         <span>Réduction de</span>
                                          <span> 40%</span>
                                       </div>
                                     `

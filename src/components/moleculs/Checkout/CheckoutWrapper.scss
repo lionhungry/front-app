@@ -1,5 +1,5 @@
 .checkout_header_content{
-    background: #222021;
+    background: #927282;
     padding: 30px;
     border-radius: 7px;
     form {
@@ -33,18 +33,18 @@
           height: 2.5rem;
           font-size: 1rem;
           color: #fff;
-          background: #7854ff;
+          background: #574c81;
           cursor: pointer;
           &:hover {
-            background-color: #6138fb;
+            background-color: #36314a;
             color: #fff;
           }
           &:active {
-            background-color: #7854ff;
+            background-color: #36314a;
             color: #fff;
           }
           &:focus {
-            background-color: #7854ff;
+            background-color: #36314a;
             color: #fff;
           }
           &[disabled] {
