@@ -514,7 +514,7 @@ export const FooterSection = `
                             </li><li>
                               <a href="/pages/nos-marques" class="footer__link-item link">Nos marques</a>
                             </li><li>
-                              <a href="https://brasero-france.com/collections/accessoires-brasero" class="footer__link-item link">Nos accessoires</a>
+                              <a href="/collections/accessoires-brasero" class="footer__link-item link">Nos accessoires</a>
                             </li><li>
                               <a href="/pages/site-en-construction" class="footer__link-item link">Vous êtes vendeur ?</a>
                             </li><li>
