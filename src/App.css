@@ -165,3 +165,8 @@ a:hover{
   align-items:center !important;
   padding-bottom:30px;
 }
+#shopify-section-collection-template{
+  .layout__section--secondary{
+    display: none;
+  }
+}

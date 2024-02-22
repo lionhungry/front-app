@@ -227,7 +227,7 @@ export const HeaderSection = `<div id="shopify-section-header-update_fix" class=
                       </li></ul>
                 </div>
               </div></div>
-</div></nav><div class="header__logo"><a href="/" class="header__logo-link" style="display:flex;justify-content: center;align-items:center"><img class="header__logo-image" style="max-width: 170px;" width="1500" height="500" src="${Logo}" alt="FEU DE BRASERO"><div class="header_logo_text" style="font-weight:bold">FEU DE BRASERO</div></a></div><div class="header__search-bar-wrapper " style="display: none">
+</div></nav><div class="header__logo"><a href="/" class="header__logo-link" style="display:flex;justify-content: center; align-items: flex-end; line-height: 26px"><img class="header__logo-image" style="max-width: 170px;" width="1500" height="500" src="${Logo}" alt="FEU DE BRASERO"><div class="header_logo_text" style="font-weight:bold">FEU DE BRASERO</div></a></div><div class="header__search-bar-wrapper " style="display: none">
           <form action="/search" method="get" role="search" class="search-bar"><div class="search-bar__top-wrapper">
               <div class="search-bar__top">
                 <input type="hidden" name="type" value="product">

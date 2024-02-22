@@ -6,7 +6,7 @@ import { fetchExternalData } from '../helper/helper';
 import FireLaoding from '../components/atoms/fireLoading/FireLoading'
 import Header from "../components/atoms/Header/Header";
 import Footer from "../components/atoms/Footer/Footer";
-import MainImage from '../assets/brasero.avif';
+import MainImage from '../assets/brasero.jpg';
 
 const MainPage = () => {
     const [htmlContent, setHtmlContent] = useState(null);
@@ -26,7 +26,6 @@ const MainPage = () => {
             const mainImage = document.querySelector('.slideshow__image[alt="Brasero France banner"]')
             element ? element.innerHTML = MainPageContactSection : '';
             if(mainImage){
-              console.log(mainImage,'mainImage')
               mainImage.src = MainImage;
             }
           } 
