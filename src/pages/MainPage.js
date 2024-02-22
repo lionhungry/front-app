@@ -10,23 +10,28 @@ import MainImage from '../assets/brasero.avif';
 
 const MainPage = () => {
     const [htmlContent, setHtmlContent] = useState(null);
-    
     const fetch = async(data) => {
         const response = await fetchExternalData(data);
         await setHtmlContent(response);
-        if(window.location.pathname === '/'){
-            const element = document.querySelector('.mosaic.mosaic--medium.mosaic--three-columns');
-            const mainImage = document.querySelector('.slideshow__image[alt="Brasero France banner"]')
-            element ? element.innerHTML = MainPageContactSection : '';
-            if(mainImage){
-              mainImage.src = MainImage;
-            }
-        } 
     }
 
     useEffect(() => {
       fetch({url:window.location.pathname})
     }, [window.location.pathname]);
+
+    useEffect(()=>{
+        if(htmlContent){
+          if(window.location.pathname === '/'){
+            const element = document.querySelector('.mosaic.mosaic--medium.mosaic--three-columns');
+            const mainImage = document.querySelector('.slideshow__image[alt="Brasero France banner"]')
+            element ? element.innerHTML = MainPageContactSection : '';
+            if(mainImage){
+              console.log(mainImage,'mainImage')
+              mainImage.src = MainImage;
+            }
+          } 
+        }
+    },[htmlContent])
 
   return (
     <div>
