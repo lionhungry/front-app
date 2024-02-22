@@ -148,9 +148,9 @@ a:hover{
     color: #3d2e59 !important;
   }
 }
-.slideshow__image[alt="Brasero France banner"] {
+/* .slideshow__image[alt="Brasero France banner"] {
   visibility: hidden;
-}
+} */
 .section__action-link{
   color: #3d2e59 !important;
 }
