@@ -472,7 +472,7 @@ export const FooterSection = `
                   <div id="block-d3538a3c-6756-4616-b2b5-4319cbbcd70a" class="footer__collapsible">
                     <div class="footer__collapsible-content">
                       <div class="rte">
-                        <p>Disponible de 8h à 18h du Lundi au Vendredi.<br><strong>Email</strong>&nbsp;:&nbsp;support@brasero-fr.com<br><strong>Adresse</strong>&nbsp;:<br>Brasero France<br>Liszt Ferenc Ter 2, 2 em 1<br>Budapest 1061<br>Hongrie<br></p>
+                        <p>Disponible de 8h à 18h du Lundi au Vendredi.<br><strong>Email</strong>&nbsp;:&nbsp;support@brasero-fr.com<br><strong>Adresse</strong>&nbsp;: Liszt Ferenc Budapest 1061 Hungary</p>
                       </div>
                     </div>
                   </div>

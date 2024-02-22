@@ -3,17 +3,18 @@
 import React,{ useState,useEffect } from 'react';
 import { fetchExternalData } from '../../helper/helper';
 import FireLaoding from '../../components/atoms/fireLoading/FireLoading';
-import ContactForm from  '../../components/atoms/ContactForm';
+import Livraison from  '../../components/atoms/Livrasion';
 import Header from "../../components/atoms/Header/Header";
 import Footer from "../../components/atoms/Footer/Footer";
-import './ContactPageWrapper.scss';
+import './LivraisonPageWrapper.scss';
 
-const ContactPage = () => {
+const LivraisonPage = () => {
    const [htmlContent, setHtmlContent] = useState(null);
     
     const fetch = async(data) => {
       const response = await fetchExternalData(data);
-      await setHtmlContent(response);
+      const htmlCode = response.replace('method="post" action="/contact#contact_form"', '').replace(/support@brasero-france.com/g,'support@brasero-fr.com')
+      await setHtmlContent(htmlCode);
     }
 
     useEffect(() => {
@@ -25,7 +26,7 @@ const ContactPage = () => {
         {htmlContent ? (
          <div>
            <Header/>
-           <ContactForm/>
+           <Livraison/>
            <div style={{visibility:'hidden',display:'none'}} dangerouslySetInnerHTML={{ __html: htmlContent }} />
            <Footer/>
          </div>
@@ -36,4 +37,4 @@ const ContactPage = () => {
    )
 }
 
-export default ContactPage
+export default LivraisonPage

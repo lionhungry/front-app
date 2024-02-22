@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
-
 const ContactForm = () => {
   const [success,setSuccess] = useState(false);
 
   return (
-    <div>
+    <div id='main'>
         <div id="shopify-section-page-contact-template" className="shopify-section">
             <div className="container container--narrow">
   <header className="page__header page__header--stack page__header--centered">
@@ -12,7 +11,6 @@ const ContactForm = () => {
     <div className="page__description rte">
         <p><meta charSet="utf-8"/>
         <span>Si vous avez des questions ou des suggestions concernant nos services et nos produits, vous pouvez remplir le formulaire en-dessous. Nous ferons de notre mieux pour vous répondre dans les plus brefs délais.</span></p>
-        <p><strong>Email</strong> : support@brasero-fr.com</p>
       </div></header>
 </div>
 
@@ -53,8 +51,8 @@ const ContactForm = () => {
             <div className="contact__store-info">
                 <h2 className="contact__store-heading heading h3">Find us</h2>
                 <div className="contact__store-text rte">
-              <p>Address:</p>
-              <p>Liszt Ferenc Ter 2, 2 em 1<br></br> Budapest 1061 <br></br> Hungary</p>
+              <span><strong>Address : </strong>Liszt Ferenc Budapest 1061 Hungary</span>
+              <p><strong>Email</strong> : support@brasero-fr.com</p>
             </div>
             </div>
             </div>

@@ -134,7 +134,7 @@ export  const fetchExternalData = async (data) => {
           }
         };
       const response = await axios(reqData);
-      const replacedHtmlContent = await response.data.replace(/data-src="([^"]*)"/g, 'src="$1"').replace(/\{width\}/g, '378').replace(/\/\/brasero-france\.com\/cdn/g, 'https://brasero-france.com/cdn');//.replace(/\+33756923679/g, '');
+      const replacedHtmlContent = await response.data.replace(/data-src="([^"]*)"/g, 'src="$1"').replace(/\{width\}/g, '378').replace(/\/\/brasero-france\.com\/cdn/g, 'https://brasero-france.com/cdn').replace(/Disponible/g,'En stock');//.replace(/\+33756923679/g, '');
       return replacedHtmlContent;
     } catch (error) {
        sendNotification()

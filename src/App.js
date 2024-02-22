@@ -12,30 +12,12 @@ import CartPage from "./pages/CartPage/CartPage";
 import CheckoutPage from "./pages/CheckoutPage/CheckoutPage";
 import MainPage from './pages/MainPage';
 import ContactPage from './pages/ContactPage/ContactPage'
+import LivraisonPage from "./pages/LivraisonPage/LivraisonPage";
 import './App.css';
-
-
 
 function App() {
   // eslint-disable-next-line no-unused-vars
   const [localStorageData, setLocalStorageData] = useState(JSON.parse(localStorage.getItem(localStorageKey))?.length || 0);
-  
-  // useEffect(() => {
-  //   const handleStorageChange = (event) => {
-  //     // Check if the changed key is the one we're interested in
-  //       // Update state with the new localStorage data
-  //       setLocalStorageData(JSON.parse(localStorage.getItem(localStorageKey))?.length || 0);
-  //   };
-   
-
-  //   // Listen for changes to the localStorage data
-  //   window.addEventListener('storage', handleStorageChange);
-
-  //   // Clean up the event listener when the component unmounts
-  //   return () => {
-  //     window.removeEventListener('storage', handleStorageChange);
-  //   };
-  // }, []);
 
   useEffect(()=>{
     if(localStorageData){
@@ -63,6 +45,8 @@ function App() {
             <Route path="/cart" element={<CartPage/>} />
             <Route path="/checkout" element={<CheckoutPage/>} />
             <Route path="/pages/contact" element={<ContactPage/>} />
+            <Route path="/pages/site-en-construction" element={<ContactPage/>} />
+            <Route path="/pages/livraison-expedition" element={<LivraisonPage/>} />
             <Route path="*" element={<MainPage />} />
           </Routes> 
       </Router>
